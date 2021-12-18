@@ -1,8 +1,9 @@
 import "./main.scss";
+import React from "react";
 
 function Contact() {
     return (
-      <section>
+      <section className="section_contact">
         <div className="contact_container">
           <div className="contact_info">
             <h3 className="contact_h3">Any questions?</h3>
@@ -26,7 +27,10 @@ function Contact() {
               <br />
               <input type="email" id="email" name="email" />
               <div className="consent_check">
-                <input type="checkbox" className="contact_check" checked="checked"/>
+                <label class="checkbox_container">
+                    <input type="checkbox"/>
+                    <span class="contact_checkmark"></span>
+                  </label>
                 <label for="agree" className="contact_consent">
                   I hereby give consent for my personal data included in my
                   application to

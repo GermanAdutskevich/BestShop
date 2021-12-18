@@ -1,9 +1,12 @@
-section {
+.section_contact {
   width: 100vw;
-  height: 90vh;
+  height: 135vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (min-width: 750px) {
+    height: 90vh;
+  }
 }
 
 .contact_container {
@@ -11,7 +14,18 @@ section {
   height: 70%;
   margin-top: 10%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  @media screen and (min-width: 750px) {
+    width: 70%;
+    height: 70%;
+    margin-top: 10%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.contact_h3 {
+  font-size: 30px;
 }
 
 .form_title {
@@ -24,10 +38,10 @@ section {
 }
 
 #name:focus,
-#email:focus{
-  border-bottom-color: #13253B;
+#email:focus {
+  border-bottom-color: #13253b;
   outline: none;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 20px;
   caret-color: #08a6e4;
   transition: 1s;
@@ -43,45 +57,58 @@ section {
   border-bottom: 1px solid #95989a;
   margin-bottom: 2rem;
   transition: 1s;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 20px;
 }
 
-.contact_check {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
-.contact_check + label {
-  display: flex;
-  margin-bottom: 2rem;
+.checkbox_container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
   cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.contact_check + label::before {
-  content: "";
-  display: inline-block;
+.checkbox_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.contact_checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 1.5rem;
   height: 1.5rem;
   border: 1px solid #95989a;
   border-radius: 0.25rem;
-  margin-right: 0.8em;
+}
+
+.checkbox_container .contact_checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+}
+
+.checkbox_container:hover input ~ .contact_checkmark {
+  background-color: #eeeeee;
+}
+
+.checkbox_container input:checked ~ .contact_checkmark {
+  background-image: url("../images/Checkmark.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
-}
-
-.contact_check:checked + label::before {
-  background-image: url("../images/Checkmark.png");
-}
-
-.contact_check:not(:disabled):not(:checked) + label:hover::before {
-  border-color: #b3d7ff;
-}
-
-.contact_check:not(:disabled):active + label::before {
-  background-image: url("../images/Checkmark.png");
 }
 
 .consent_check {
@@ -112,48 +139,58 @@ section {
   border: none;
 }
 
-.contact_submit:hover{
+.contact_submit:hover {
   cursor: pointer;
   opacity: 2;
 }
 
-.contact_text{
+.contact_text {
   margin-top: 1.2rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
 }
 
-.contact_mail_and_num{
+.contact_mail_and_num {
   display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
   margin-top: 2.3rem;
-  color: #A5A5A5;
-  font-family: 'Open Sans', sans-serif;
+  color: #a5a5a5;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
+  @media screen and (min-width: 750px) {
+    flex-direction: row;
+  }
 }
 
-.contact_email{
+.contact_email {
   margin-right: 20px;
+  margin-bottom: 8px;
+  @media screen and (min-width: 750px) {
+    margin-bottom: 0;
+  }
 }
 
-.contact_email:hover{
+.contact_email:hover {
   cursor: pointer;
 }
 
-.contact_num:hover{
+.contact_num:hover {
   cursor: pointer;
 }
 
-.contact_email,.contact_num{
+.contact_email,
+.contact_num {
   display: flex;
   align-items: center;
 }
 
-.contact_email::before{
-  content: url('../images/Mail\ Icon.png');
+.contact_email::before {
+  content: url("../images/Mail\ Icon.png");
   margin-right: 10px;
 }
 
-.contact_num::before{
-  content: url('../images/Phone\ Icon.png');
+.contact_num::before {
+  content: url("../images/Phone\ Icon.png");
   margin-right: 10px;
 }
