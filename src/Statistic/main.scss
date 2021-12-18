@@ -1,0 +1,102 @@
+.statistic {
+  height: 100vh;
+  @media screen and (min-width: 750px) {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.stat_data {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 750px) {
+    flex-direction: row;
+    width: 50vw;
+    justify-content: space-between;
+  }
+}
+
+.stat_el {
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  @media screen and (min-width: 750px) {
+    height: 130px;
+  }
+}
+
+.stat_h2 {
+  margin-top: 30px;
+  font-size: 30px;
+  color: #000000;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  @media screen and (min-width: 750px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+}
+
+.stat_icon {
+  height: 63px;
+  width: 63px;
+  border-radius: 50%;
+}
+
+.stat_image {
+  height: 63px;
+  width: 63px;
+  transform: translate(50%, 10%);
+  background-repeat: no-repeat;
+}
+
+.stat_icon_1 {
+  background-color: #fb3b64;
+}
+
+.stat_image_1 {
+  background-image: url("../images/Person.png");
+}
+
+.stat_icon_2 {
+  background-color: #08a6e4;
+}
+
+.stat_image_2 {
+  transform: translate(40%, 20%);
+  background-image: url("../images/Eye.png");
+}
+
+.stat_icon_3 {
+  background-color: #55dfb4;
+}
+
+.stat_image_3 {
+  background-image: url("../images/Catalog.png");
+}
+
+.stat_number {
+  margin-bottom: 1rem;
+  margin-top: 0.7rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 5.96px;
+  color: #000000;
+  @media screen and (min-width: 750px) {
+    margin: 0;
+  }
+}
+
+.stat_text {
+  color: #a5a5a5;
+  font-family: "Raleway", sans-serif;
+  font-weight: normal;
+  font-size: 17px;
+}
