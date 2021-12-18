@@ -1,0 +1,196 @@
+.section_contact {
+  width: 100vw;
+  height: 135vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 750px) {
+    height: 90vh;
+  }
+}
+
+.contact_container {
+  width: 70%;
+  height: 70%;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 750px) {
+    width: 70%;
+    height: 70%;
+    margin-top: 10%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.contact_h3 {
+  font-size: 30px;
+}
+
+.form_title {
+  color: #08a6e4;
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.205rem;
+  text-transform: uppercase;
+}
+
+#name:focus,
+#email:focus {
+  border-bottom-color: #13253b;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  caret-color: #08a6e4;
+  transition: 1s;
+}
+
+#name,
+#email {
+  height: 2.5rem;
+  width: 100%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #95989a;
+  margin-bottom: 2rem;
+  transition: 1s;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+
+.checkbox_container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.contact_checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #95989a;
+  border-radius: 0.25rem;
+}
+
+.checkbox_container .contact_checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+}
+
+.checkbox_container:hover input ~ .contact_checkmark {
+  background-color: #eeeeee;
+}
+
+.checkbox_container input:checked ~ .contact_checkmark {
+  background-image: url("../images/Checkmark.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.consent_check {
+  display: flex;
+}
+
+.contact_consent {
+  color: #707070;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.contact_send {
+  text-align: end;
+}
+
+.contact_submit {
+  height: 57px;
+  width: 226px;
+  color: #ffffff;
+  background-color: #08a6e4;
+  border-radius: 35px;
+  box-shadow: 5px 10px 14px #07ace629;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  border: none;
+}
+
+.contact_submit:hover {
+  cursor: pointer;
+  opacity: 2;
+}
+
+.contact_text {
+  margin-top: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+.contact_mail_and_num {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  margin-top: 2.3rem;
+  color: #a5a5a5;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  @media screen and (min-width: 750px) {
+    flex-direction: row;
+  }
+}
+
+.contact_email {
+  margin-right: 20px;
+  margin-bottom: 8px;
+  @media screen and (min-width: 750px) {
+    margin-bottom: 0;
+  }
+}
+
+.contact_email:hover {
+  cursor: pointer;
+}
+
+.contact_num:hover {
+  cursor: pointer;
+}
+
+.contact_email,
+.contact_num {
+  display: flex;
+  align-items: center;
+}
+
+.contact_email::before {
+  content: url("../images/Mail\ Icon.png");
+  margin-right: 10px;
+}
+
+.contact_num::before {
+  content: url("../images/Phone\ Icon.png");
+  margin-right: 10px;
+}

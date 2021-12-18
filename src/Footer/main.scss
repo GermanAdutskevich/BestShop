@@ -1,0 +1,51 @@
+footer{
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F7F7F7;
+    box-shadow: 0px -5px 40px #00000029;
+}
+
+.info{
+    height: 60%;
+    margin-left: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer_logo{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    color: #08A6E4;
+    font-size: 26px;
+}
+
+.footer_rights{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    color: #A5A5A5;
+
+}
+
+.social{
+    margin-right: 8%;
+}
+
+.twitter, .facebook{
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.twitter{
+    background-image: url("../images/Twitter.png");
+    margin-right: 20px;
+}
+
+.facebook{
+    background-image: url("../images/Facebook.png");
+}
