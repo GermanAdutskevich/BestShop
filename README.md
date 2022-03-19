@@ -1,6 +1,17 @@
+# About and preview 
+
+A simple React project called "BestShop" which consists of four main parts.
+
+1. Header
 ![Header](Opening_Header.jpg)
+
+2. Statistic
 ![Statistic](Statistics.jpg)
+
+3. Pricing
 ![Pricing](Pricing.jpg)
+
+4. Contact
 ![Contact](Contact.jpg)
 
 
